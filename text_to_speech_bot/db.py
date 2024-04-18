@@ -60,7 +60,7 @@ def get_user_chars(uid) -> int:
     conn = sqlite3.connect('db.sqlite3')
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
-    res = [dict(res) for res in cur.execute(sql, (uid, ))][0]
+    res = [dict(res) for res in cur.execute(sql, (uid, ))]
     if not res:
         return MAX_SYMBOLS_PER_USER
     conn.close()

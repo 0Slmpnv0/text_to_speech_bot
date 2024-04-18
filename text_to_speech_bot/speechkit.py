@@ -2,7 +2,6 @@ from config import MAX_SYMBOLS_PER_REQUETS, MAX_SYMBOLS_PER_USER
 from dotenv import get_key
 import requests
 import time
-from conspiracy import iam_data
 from db import get_user_chars, update_user_chars, add_user
 
 
@@ -32,7 +31,7 @@ def check_iam() -> None:
 
 
 #  token_data = create_new_iam_token()
-token_data = iam_data
+token_data = create_new_iam_token()
 iam = token_data['access_token']
 expires_at = time.time() + token_data['expires_in']
 
