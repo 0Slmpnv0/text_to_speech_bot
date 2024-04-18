@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "text-to-speech-bot"
+version = "0.1.0"
+description = ""
+authors = ["Slmpnv <slmpnv.code.mail@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytelegrambotapi = "^4.17.0"
+python-dotenv = "^1.0.1"
+aiohttp = "^3.9.4"
+icecream = "^2.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
